@@ -78,9 +78,10 @@ XML文件在功能模块执行中的输入和输入过程：
 首先获取当前pair数量，避免生成小组的结果最后的小组为空缺
 
 当前pair数量满足公式
-$$
+![1](http://latex.codecogs.com/svg.latex?$$
 pair*2/size=一个整数
-$$
+$$)
+
 设定好生成规则，包括cohort（多个年级）,diversity（来自不同国家地区）,size（小组人数：4或者6）
 
 **由`pair.xml`生成`teams.xml`**
