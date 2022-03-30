@@ -1,105 +1,118 @@
-# Instruction for Team Dashboard
+# 关于Team Dashboard的介绍
 
-XML File Path: campus_only/xml
+需求分析：
 
-the permission is set already.
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Team%20Dashboard%20Xmind.jpg" style="zoom:25%"/>
 
-### 1.Submit Pair:
+***
 
-​	email repeat check file: example_Teams.xml
+功能模块划分：
 
-​	email repeat check form: this is a test I use, and you can use other existed  emails in the file. 
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Team%20Dashboard%20Xmind.jpg" style="zoom:25%"/>
 
-    <Student id="stu1">
-      <Forename>Lingxin</Forename>
-      <Surname>Gu</Surname>
-      <Email>lgu8@sheffield.ac.uk</Email>
-      <Region>Overseas</Region>
-      <Degree>MSc Advanced Software Engineering</Degree>
-      <Level>Postgraduate</Level>
-    </Student>
-    <Student id="stu2">
-      <Forename>Yan</Forename>
-      <Surname>Ge</Surname>
-      <Email>YGe5@sheffield.ac.uk</Email>
-      <Region>Overseas</Region>
-      <Degree>MSc Advanced Software Engineering</Degree>
-      <Level>Postgraduate</Level>
-    </Student>
+***
 
-submit form:
+技术需要：
 
-shell command `forename1=John&surname1=Smith&email1=JSmith9@sheffield.ac.uk&region1=EU&degree1=MEng+Software+Engineering&level1=Postgraduate&forename2=Emma&surname2=Dubois&email2=EDubois3@sheffield.ac.uk&region2=Overseas&degree2=MSc+Computer+Science&level2=Postgraduate`
+* HTML
+* CGI Script
+* Executable Jar (Java)
+* XML, XSL
+* JavaScript, LinuxOS, Apache Server，正则表达式等
 
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Technology.png" style ="zoom:25%">
 
+***
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:67%;"/>
+数据的转化和处理过程：
 
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Data%20Flow.png" style ="zoom:25%">
 
+***
 
-To: xml/pair/pair_submit.xml
+XML文件在功能模块执行过程中的输入和输入过程：
 
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/File%20Flow.png" style ="zoom:25%">
 
+***
 
-### 2.Generate Team:
+### 1.Submit Pair 提交二人小组信息:
 
-check pair number to make the result of [pair number] * 2 / [size] is a integer
+​	包括正则表达式验证邮箱，重复邮箱与后台文件对比验证流程
 
-From: xml/pair/
+​	表单示例 :
 
-shell command
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:33%;"/>
 
-`cohort=no&diversity=no&size=4`
+​	**生成`pair.xml`**	
 
-To: xml/Teams.xml
+​	生成的XML文件结构如下：
 
+```xml
+<Student id="stu1">
+  <Forename>Lingxin</Forename>
+  <Surname>Gu</Surname>
+  <Email>lgu8@sheffield.ac.uk</Email>
+  <Region>Overseas</Region>
+  <Degree>MSc Advanced Software Engineering</Degree>
+  <Level>Postgraduate</Level>
+</Student>
+<Student id="stu2">
+  <Forename>Yan</Forename>
+  <Surname>Ge</Surname>
+  <Email>YGe5@sheffield.ac.uk</Email>
+  <Region>Overseas</Region>
+  <Degree>MSc Advanced Software Engineering</Degree>
+  <Level>Postgraduate</Level>
+</Student>
+```
 
+***
 
-### 3.Allocate Assessor
+### 2.Generate Team 生成小组:
 
-From: xml/Teams.xml
+首先获取当前pair数量，避免生成小组的结果最后的小组为空缺
 
-To:  
+当前pair数量满足公式
+$$
+pair*2/size=一个整数
+$$
+设定好生成规则，包括cohort（多个年级）,diversity（来自不同国家地区）,size（小组人数：4或者6）
 
-xml/allocatedTeams.xml
+**由`pair.xml`生成`teams.xml`**
 
-xml/allocatedTeams_team.xml
+***
 
-xml/allocatedTeams_assessor.xml
+### 3.Allocate Assessor 分配测试的小组：
 
-### 4.View Team List 
+每个小组成员都会分配到一个小组来打分，如果一个小组有4个人，代表一个小组会被4名同学打分，最终通过一定的算法和规则得到小组所获得的分数。
 
-via the link to view [allocatedTeams_team.xml]
+**由`teams.xml`会生成以下三个文件**
 
-XSL attached might requires Firefox browser
+* **`allocatedTeams.xml`**用于Manage Team功能
+* **`allocatedTeams_team.xml`**用于View Team List功能
+* **`allocatedTeams_assessor.xml`**用于View Assessor List功能
 
-### 5.View Assessor List
+***
 
-via the link to view [allocatedTeams_assessor.xml]
+### 4.View Team List  查看小组分配结果：
 
-XSL attached might requires Firefox browser
+**`allocatedTeams_team.xml`**解析**`teamView.xsl`**，最终在网页上展示
 
-### 6.Manage Team
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/View%20Team%20List.png" style="zoom:33%;"/>
 
-From: xml/allocatedTeams.xml
+### 5.View Assessor List 查看测试同学的分配结果 ：
 
-​	Drop out (stu9): `action=drop&identity=&email1=&email2=hjin4@sheffield.ac.uk`    
+**`allocatedTeams_assessor.xml`**解析**`assessorView.xsl`**，最终在网页上展示
 
-​	Change team(stu18 to Team10): `action=change&identity=Team10&email1=slu8%40sheffield.ac.uk&email2=`
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/View%20Assessor%20List.png" style="zoom:33%;"/>
 
-To: 
+### 6.Manage Team 更新小组成员：
 
-xml/allocatedTeams.xml (update!) 
+* 删除某位同学Drop out
+  * Drop out (stu9): `action=drop&identity=&email1=&email2=hjin4@sheffield.ac.uk` 
+* 修改某位同学所在的小组Change Team
+  * action=change&identity=Team10&email1=slu8%40sheffield.ac.uk&email2=
 
-xml/allocatedTeams_team.xml(update!)
-
-xml/allocatedTeams_assessor.xml(update!)
-
-### Then
-
-could still access 2 lists via the link and view the updated lists.
-
-
-
-Java program codes attached in the directory "Java_code"
+**更新`allocatedTeams.xml`并生成新的`allocatedTeams_team.xml`，`allocatedTeams_assessor.xml`**
 
