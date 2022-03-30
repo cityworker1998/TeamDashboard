@@ -33,7 +33,7 @@ shell command `forename1=John&surname1=Smith&email1=JSmith9@sheffield.ac.uk&regi
 
 
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:67%;"/>
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:33%;"/>
 
 
 
