@@ -1,5 +1,9 @@
 # 关于Team Dashboard的介绍
 
+[TOC]
+
+### 总体情况概览
+
 需求分析：
 
 <img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Team%20Dashboard%20Xmind.jpg" style="zoom:25%"/>
@@ -115,4 +119,14 @@ $$
   * action=change&identity=Team10&email1=slu8%40sheffield.ac.uk&email2=
 
 **更新`allocatedTeams.xml`并生成新的`allocatedTeams_team.xml`，`allocatedTeams_assessor.xml`**
+
+
+
+***
+
+更多相关图片和相关代码可查看
+
+图片 [Image](https://github.com/DocYangxm/TeamDashboard/tree/master/Image)
+
+代码 [Java](https://github.com/DocYangxm/TeamDashboard/tree/master/Java) [HTML+XML](https://github.com/DocYangxm/TeamDashboard/tree/master/public_html) 
 
