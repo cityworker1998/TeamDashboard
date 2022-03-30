@@ -1,6 +1,6 @@
 # 关于Team Dashboard的介绍
 
-[TOC]
+
 
 ### 总体情况概览
 
@@ -34,7 +34,7 @@
 
 ***
 
-XML文件在功能模块执行过程中的输入和输入过程：
+XML文件在功能模块执行中的输入和输入过程：
 
 <img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/File%20Flow.png" style ="zoom:25%">
 
