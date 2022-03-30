@@ -31,9 +31,7 @@ submit form:
 
 shell command `forename1=John&surname1=Smith&email1=JSmith9@sheffield.ac.uk&region1=EU&degree1=MEng+Software+Engineering&level1=Postgraduate&forename2=Emma&surname2=Dubois&email2=EDubois3@sheffield.ac.uk&region2=Overseas&degree2=MSc+Computer+Science&level2=Postgraduate`
 
-<img src="C:\Users\Xinmeng\AppData\Roaming\Typora\typora-user-images\image-20210918230115843.png" alt="image-20210918230115843" style="zoom:33%;" />
-
-
+https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png
 
 To: xml/pair/pair_submit.xml
 
