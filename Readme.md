@@ -24,7 +24,11 @@
 
 ***
 
+<<<<<<< HEAD
 数据的转化和处理过程：
+=======
+<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:33%;"/>
+>>>>>>> 87a0b643fcc056d40a5ac7d9aa5e67da0d7c18a8
 
 <img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Data%20Flow.png" style ="zoom:25%">
 
