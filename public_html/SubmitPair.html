@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>SubmitPair</title>
+<body>
+<h2>Make Your Pair</h2>
+<p>Please submit your information</p>
+<form action="cgi-bin/submitPair.cgi" method="POST">
+<fieldset>
+<legend>Student 1:</legend>
+<label for="forename">Forename:</label>
+<input type="text" name="forename1" id="forename1" placeholder="John" required><br>
+<label for="surname">Surname:</label>
+<input type="text" name="surname1" id="surname1" placeholder="Wick" required><br>
+<label for="email">Email:</label>
+<input type="text" name="email1" id="email1" pattern="[a-zA-Z]+\d+@sheffield.ac.uk" placeholder="JWick56@sheffield.ac.uk" required><br>
+<label for="region">Region: </label>
+<select name="region1" id="region1" required>
+<option value="UK">UK</option>
+<option value="EU">EU</option>
+<option value="Overseas" >Overseas</option>
+</select><br>
+<label for="degree">Degree:</label>
+<input type="text" name="degree1" id="degree1" placeholder="MEng Software Engineering" required> <br>
+<label for="level">Level:</label>
+<select name="level1" id="level1" required>
+<option value="Undergraduate">Undergraduate</option>
+<option value="Postgraduate" >Postgraduate</option>
+<option value="PhD">PhD</option>
+</select><br>
+</fieldset>
+<fieldset>
+<legend>Student 2:</legend>
+<label for="forename">Forename:</label>
+<input type="text" name="forename2" id="forename2" placeholder="John" required><br>
+<label for="surname">Surname:</label>
+<input type="text" name="surname2" id="surname2" placeholder="Wick" required><br>
+<label for="email">Email:</label>
+<input type="text" name="email2" id="email2" pattern="[a-zA-Z]+\d+@sheffield.ac.uk" placeholder="JWick56@sheffield.ac.uk" required><br>
+<label for="region">Region: </label>
+<select name="region2" id="region2" required>
+<option value="UK">UK</option>
+<option value="EU">EU</option>
+<option value="Overseas" >Overseas</option>
+</select><br>
+<label for="degree">Degree:</label>
+<input type="text" name="degree2" id="degree2" placeholder="MEng Software Engineering" required> <br>
+<label for="level">Level:</label>
+<select name="level2" id="level2" required>
+<option value="Undergraduate">Undergraduate</option>
+<option value="Postgraduate" >Postgraduate</option>
+<option value="PhD">PhD</option>
+</select><br>
+</fieldset>
+<br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+
+
+</body>
+</html>

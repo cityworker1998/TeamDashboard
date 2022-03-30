@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pair cohort="Postgraduate">
+	<Student>
+      <Forename>Xin</Forename>
+      <Surname>Qiu</Surname>
+      <Email>xqiu5@sheffield.ac.uk</Email>
+      <Region>Overseas</Region>
+      <Degree>MSc Software Systems and Internet Technology</Degree>
+      <Level>Postgraduate</Level>
+    </Student>
+    <Student>
+      <Forename>Shibei</Forename>
+      <Surname>Lu</Surname>
+      <Email>slu8@sheffield.ac.uk</Email>
+      <Region>Overseas</Region>
+      <Degree>MSc Advanced Computer Science</Degree>
+      <Level>Postgraduate</Level>
+    </Student>
+</Pair>

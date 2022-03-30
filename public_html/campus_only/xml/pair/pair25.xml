@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pair cohort="Postgraduate">
+	<Student>
+      <Forename>Jack</Forename>
+      <Surname>Slinger</Surname>
+      <Email>jmslinger1@sheffield.ac.uk</Email>
+      <Region>United Kingdom</Region>
+      <Degree>MEng Software Engineering</Degree>
+      <Level>Postgraduate</Level>
+    </Student>
+    <Student>
+      <Forename>Amy</Forename>
+      <Surname>Brereton</Surname>
+      <Email>ambrereton1@sheffield.ac.uk</Email>
+      <Region>United Kingdom</Region>
+      <Degree>MEng Enterprise Computing</Degree>
+      <Level>Postgraduate</Level>
+    </Student>
+</Pair>

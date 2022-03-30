@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title>Manage Team</title>
+<body>
+<h2>Manage Teams</h2>
+<p>Change a student's belonging team or drop him(due to his leave of absence)</p>
+<p><strong>Be careful with the format of student's email !</strong></p>
+
+<form action="cgi-bin/manageTeam.cgi" method="POST">
+<fieldset>
+<legend>Action and student information :</legend>
+<h3>Change their team   or   Drop them out</h3>
+<div>
+<select name="action" id="action" onChange="display()">
+	<option value="" selected>Choose your action</option>
+	<option value="change">Change team</option>
+	<option value="drop">Drop out</option>
+	
+</select>
+</div>
+
+<div id="change" class="none" style="display:none">
+	<hr />
+	<h4>Input student's email and new team (e.g. "Team9", please check the format in team list)</h4>
+	<label for="identity">New team : </label>
+	<input type="text" name="identity" id="identity">
+	<br><br>
+	<label for="email1">Email: </label>
+	<input type="text" name="email1" id="email1" pattern="[a-zA-Z]+\d+@sheffield.ac.uk">
+	<br><br>
+	
+	<input type="submit" value="Change" >
+</div>
+
+<div id="drop" class="none" style="display:none">
+	<hr />
+	<h4>Input student's email</h4>
+	<label for="email2">Email: </label>
+	<input type="text" name="email2" id="email2" pattern="[a-zA-Z]+\d+@sheffield.ac.uk">
+	<br><br>
+	<input type="submit" value="Drop">
+</div>
+
+</fieldset>
+
+<p><strong>After modifying team, you can re-click the "View Team List" and "View Assessor List" to check update.</strong></p>
+
+<script type="text/javascript">
+function display(){
+  var myselect=document.getElementById('action');
+  var index=myselect.selectedIndex;
+  var value=myselect.options[index].value;
+  if(value=='change'){
+  document.getElementById('change').style.display="block";
+  document.getElementById('drop').style.display="none";
+  }else if(value=='drop'){
+	document.getElementById('drop').style.display="block";
+	document.getElementById('change').style.display="none";
+	}else{
+		document.getElementById('drop').style.display="none";
+		document.getElementById('change').style.display="none";
+		}
+} 
+
+/* 
+//This function can't be called
+
+function setRequired(){
+  var select=document.getElementById('action');
+  var index=select.selectedIndex;
+  var value=select.options[index].value;
+  if(value=='change'){
+	document.getElementById("identity").setAttribute("required", "");
+	document.getElementById("email1").setAttribute("required", "");
+	document.getElementById("email2").removeAttribute("required");
+	  }else if(value=='drop'){
+		document.getElementById("identity").removeAttribute("required");
+		document.getElementById("email1").removeAttribute("required");
+		document.getElementById("email2").setAttribute("required", "");
+		  }else{
+			document.getElementById("identity").setAttribute("required", "");
+			document.getElementById("email1").setAttribute("required", "");
+			document.getElementById("email2").setAttribute("required", "");
+			}
+		
+}
+
+*/
+
+</script>
+
+</form>
+
+
+</body>
+</html>

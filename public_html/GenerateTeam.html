@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>GenerateTeam</title>
+<body>
+<h2>Generate Student Teams</h2>
+<p>Before generating teams, please check the number of pairs in directory to avoid unnecessary issues.</p>
+	<a href="CheckPairNumber.html"> Check Pair Number</a><br><br>
+<hr>
+<h3>Set rules for generating teams.</h3>
+<form action="cgi-bin/generateTeam.cgi" method="POST">
+<fieldset>
+Mixed Cohort: <input type="radio" name="cohort" value="yes">Yes 
+				<input type="radio" name="cohort" value="no" checked="checked">No<br>
+Maximum Diversity:<input type="radio" name="diversity" value="yes">Yes
+				  <input type="radio" name="diversity" value="no" checked="checked">No<br>
+Size of Team:<input type="radio" name="size" value="4" checked="checked">4
+			 <input type="radio" name="size" value="6">6<br>
+</fieldset><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form><br>
+
+<fieldset>
+<h3>Information about options</h3>
+<hr>
+<h5><big>Mixed Cohort :</big><h5> 
+<p><strong>Level of students in a team [Undergraduate, Master or PhD ]:</strong></p>
+<p><big>Yes</big>: Undergraduate, Master and PhD students can be divided into a team.</p>
+<p><big>No</big>: Undergraduate, Master and PhD students can't be divided into a team.</p>
+<hr>
+<h5><big>Maximum Diversity :</big><h5> 
+<p><strong>Region of students in a team [UK,EU or Overseas]:</strong></p>
+<p><big>Yes</big>: Students from different regions can be divided into a team.</p>
+<p><big>No</big>: Only students from same region can be divided into a team.</p>
+<hr>
+<h5><big>Size of Team :</big><h5> 
+<p><strong>Number of students in a team [4 or 6]</strong></p>
+</fieldset>
+</body>
+</html>

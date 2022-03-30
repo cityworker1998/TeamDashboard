@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pair cohort="Postgraduate">
+	<Student>
+      <Forename>Jincao </Forename>
+      <Surname>Zhang</Surname>
+      <Email>jzhang73@sheffield.ac.uk</Email>
+      <Region>Overseas</Region>
+      <Degree>MSc Advanced Computer Science</Degree>
+      <Level>Postgraduate</Level>
+    </Student>
+    <Student>
+      <Forename>Wenqiang</Forename>
+      <Surname>Jing</Surname>
+      <Email>wjing1@sheffield.ac.uk</Email>
+      <Region>Overseas</Region>
+      <Degree>MSc Data Communications</Degree>
+      <Level>Postgraduate</Level>
+    </Student>
+</Pair>

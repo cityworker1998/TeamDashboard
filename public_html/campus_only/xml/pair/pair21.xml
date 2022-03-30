@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pair cohort="Postgraduate">
+	<Student>
+      <Forename>James</Forename>
+      <Surname>McIlveen</Surname>
+      <Email>jmcilveen1@sheffield.ac.uk</Email>
+      <Region>United Kingdom</Region>
+      <Degree>MComp Computer Science</Degree>
+      <Level>Undergraduate</Level>
+    </Student>
+    <Student>
+      <Forename>Alex</Forename>
+      <Surname>Millward</Surname>
+      <Email>amillward1@sheffield.ac.uk</Email>
+      <Region>United Kingdom</Region>
+      <Degree>MComp Computer Science</Degree>
+      <Level>Undergraduate</Level>
+    </Student>
+</Pair>
