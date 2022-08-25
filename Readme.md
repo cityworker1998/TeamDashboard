@@ -6,13 +6,13 @@
 
 需求分析：
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Team%20Dashboard%20Xmind.jpg" style="zoom:25%"/>
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/Team%20Dashboard%20Xmind.jpg" style="zoom:25%"/>
 
 ***
 
 功能模块划分：
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Team%20Dashboard%20Requirements.png" style="zoom:25%"/>
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/Team%20Dashboard%20Requirements.png" style="zoom:25%"/>
 
 ***
 
@@ -24,19 +24,19 @@
 * XML, XSL
 * JavaScript, LinuxOS, Apache Server，正则表达式等
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Technology.png" style ="zoom:25%">
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/Technology.png" style ="zoom:25%">
 
 ***
 
 数据的转化和处理过程：
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Data%20Flow.png" style ="zoom:25%">
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/Data%20Flow.png" style ="zoom:25%">
 
 ***
 
 XML文件在功能模块执行中的输入和输入过程：
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/File%20Flow.png" style ="zoom:25%">
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/File%20Flow.png" style ="zoom:25%">
 
 ***
 
@@ -46,7 +46,7 @@ XML文件在功能模块执行中的输入和输入过程：
 
 ​	表单示例 :
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:33%;"/>
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/Submit%20Pair.png" style="zoom:33%;"/>
 
 ​	**生成`pair.xml`**	
 
@@ -78,7 +78,8 @@ XML文件在功能模块执行中的输入和输入过程：
 首先获取当前pair数量，避免生成小组的结果最后的小组为空缺
 
 当前pair数量满足公式
-![1](http://latex.codecogs.com/svg.latex?\frac{pair * 2}{size} = 整数)
+
+![](https://latex.codecogs.com/svg.image?\\frac{pair&space;*&space;2}{size}&space;=&space;Integer)
 
 设定好生成规则，包括cohort（多个年级）,diversity（来自不同国家地区）,size（小组人数：4或者6）
 
@@ -92,9 +93,9 @@ XML文件在功能模块执行中的输入和输入过程：
 
 **由`teams.xml`会生成以下三个文件**
 
-* **`allocatedTeams.xml`**用于Manage Team功能
-* **`allocatedTeams_team.xml`**用于View Team List功能
-* **`allocatedTeams_assessor.xml`**用于View Assessor List功能
+* `allocatedTeams.xml`用于Manage Team功能
+* `allocatedTeams_team.xml`用于View Team List功能
+* `allocatedTeams_assessor.xml`用于View Assessor List功能
 
 ***
 
@@ -102,13 +103,13 @@ XML文件在功能模块执行中的输入和输入过程：
 
 **`allocatedTeams_team.xml`**解析**`teamView.xsl`**，最终在网页上展示
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/View%20Team%20List.png" style="zoom:33%;"/>
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/View%20Team%20List.png" style="zoom:33%;"/>
 
 ### 5.View Assessor List 查看测试同学的分配结果 ：
 
 **`allocatedTeams_assessor.xml`**解析**`assessorView.xsl`**，最终在网页上展示
 
-<img src="https://github.com/DocYangxm/TeamDashboard/blob/master/Image/View%20Assessor%20List.png" style="zoom:33%;"/>
+<img src="https://github.com/cityworker1998/TeamDashboard/blob/master/Image/View%20Assessor%20List.png" style="zoom:33%;"/>
 
 ### 6.Manage Team 更新小组成员：
 
@@ -123,9 +124,12 @@ XML文件在功能模块执行中的输入和输入过程：
 
 ***
 
-更多相关图片和相关代码可查看
+**More relevant contents are visible via the links below** 
 
-图片 [Image](https://github.com/DocYangxm/TeamDashboard/tree/master/Image)
+| Content | URL                                                          |
+| ------- | ------------------------------------------------------------ |
+| Image   | [Image](https://github.com/cityworker1998/TeamDashboard/tree/master/Image) |
+| Code    | [Java](https://github.com/cityworker1998/TeamDashboard/tree/master/Java) ;[HTML+XML](https://github.com/cityworker1998/TeamDashboard/tree/master/public_html) |
 
-代码 [Java](https://github.com/DocYangxm/TeamDashboard/tree/master/Java) [HTML+XML](https://github.com/DocYangxm/TeamDashboard/tree/master/public_html) 
+
 
